@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="admin-container">
+    <h2>Admin Dashboard</h2>
+    <button class="neon-btn" onclick="goToPortfolio()">Back to Portfolio</button>
+
+    <h3>Registered Users</h3>
+    <table id="admin-users-table">
+        <tr>
+            <th>Username</th>
+            <th>Registered At</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+    <h3>User Messages</h3>
+    <table id="admin-messages-table">
+        <tr>
+            <th>From</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Action</th>
+        </tr>
+    </table>
+</div>
+
+<div id="popup" class="popup"></div>
+<script src="script.js"></script>
+<script>
+displayAdmin();
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="admin-container">
+    <h2>Admin Dashboard</h2>
+    <h3>Users</h3>
+    <table id="admin-users-table"></table>
+
+    <h3>Messages</h3>
+    <table id="admin-messages-table"></table>
+
+    <button class="neon-btn" onclick="goToPortfolio()">Go to Portfolio</button>
+</div>
+<div id="popup" class="popup"></div>
+<script src="script.js"></script>
+<script>
+window.onload = () => { enforceLogin(); displayAdmin(); };
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ivan Dejumo Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Ivan C. Dejumo</h2>
+        <p>3rd-year BScs, SLTCFDI</p>
+        <div class="skills">
+            <img src="html.png" alt="HTML">
+            <img src="css.png" alt="CSS">
+            <img src="js.png" alt="JS">
+            <img src="python.png" alt="Python">
+            <img src="images.jpeg" alt="C#">
+        </div>
+        <div id="welcome">
+            <p id="username-display"></p>
+            <button class="neon-btn" onclick="logout()">Logout</button>
+            <button class="neon-btn" onclick="showContact()">Contact Admin</button>
+            <button class="neon-btn" onclick="goToAdmin()" id="admin-btn" style="display:none;">Admin Dashboard</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="profile-image">
+            <img src="profile.jpg" alt="Ivan Profile">
+        </div>
+
+        <h1>My Projects</h1>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Website Project</h3>
+                <p>Finished website design and implementation</p>
+                <a class="neon-btn" href="#">Download</a>
+            </div>
+            <div class="project-card">
+                <h3>Application Project</h3>
+                <p>Finished application with Python backend</p>
+                <a class="neon-btn" href="#">Download</a>
+            </div>
+        </div>
+
+        <h1>Messages</h1>
+        <div id="user-messages" class="message-section"></div>
+    </div>
+</div>
+
+<!-- Contact Form -->
+<div id="contact-form" class="form-popup" style="display:none;">
+    <h2>Contact Admin</h2>
+    <input type="text" id="contact-subject" placeholder="Subject">
+    <textarea id="contact-message" placeholder="Your Message"></textarea>
+    <button class="neon-btn" onclick="sendMessage()">Send</button>
+    <button class="neon-btn" onclick="closeForm('contact-form')">Cancel</button>
+</div>
+
+<div id="popup" class="popup"></div>
+<script src="script.js"></script>
+</body>
+</html>
